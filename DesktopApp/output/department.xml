@@ -1,0 +1,186 @@
+<department id="1">
+  <currentStudent id="2">
+    <name>eliejoe</name>
+    <id>1</id>
+    <studentLevel>Undergraduate</studentLevel>
+    <evaluations id="3"/>
+    <department reference="1"/>
+    <jobApplications id="4"/>
+    <registrations id="5">
+      <registration id="6">
+        <dateRegistered id="7">2017-04-11</dateRegistered>
+        <student reference="2"/>
+        <job id="8">
+          <workHours>30</workHours>
+          <hourlyRate>30</hourlyRate>
+          <startDate id="9">2017-04-13</startDate>
+          <endDate id="10">2017-04-30</endDate>
+          <jobState>Filled</jobState>
+          <jobType>TA</jobType>
+          <jobPosting id="11">
+            <deadline id="12">2017-04-12</deadline>
+            <startDate reference="9"/>
+            <endDate reference="10"/>
+            <description>,kjhlkjh</description>
+            <jobPostingState>Active</jobPostingState>
+            <jobs id="13">
+              <job id="14">
+                <workHours>30</workHours>
+                <hourlyRate>30</hourlyRate>
+                <startDate reference="9"/>
+                <endDate reference="10"/>
+                <jobState>Open</jobState>
+                <jobType>TA</jobType>
+                <jobPosting reference="11"/>
+              </job>
+              <job id="15">
+                <workHours>30</workHours>
+                <hourlyRate>35</hourlyRate>
+                <startDate reference="9"/>
+                <endDate reference="10"/>
+                <jobState>Open</jobState>
+                <jobType>TA</jobType>
+                <jobPosting reference="11"/>
+              </job>
+              <job reference="8"/>
+            </jobs>
+            <instructor id="16">
+              <name>jeremy</name>
+              <id>1</id>
+              <jobOfferings id="17">
+                <jobPosting reference="11"/>
+              </jobOfferings>
+              <course id="18">
+                <budgetGiven>2000.0</budgetGiven>
+                <budgetActual>1100.0</budgetActual>
+                <id>ECSE321</id>
+                <numLabs>2</numLabs>
+                <numTutorials>3</numTutorials>
+                <instructor reference="16"/>
+                <department reference="1"/>
+              </course>
+              <department reference="1"/>
+            </instructor>
+            <forms id="19"/>
+          </jobPosting>
+          <registration reference="6"/>
+        </job>
+      </registration>
+    </registrations>
+  </currentStudent>
+  <students id="20">
+    <student reference="2"/>
+    <student id="21">
+      <name>me</name>
+      <id>1</id>
+      <studentLevel>Graduate</studentLevel>
+      <evaluations id="22"/>
+      <department reference="1"/>
+      <jobApplications id="23"/>
+      <registrations id="24"/>
+    </student>
+    <student id="25">
+      <name>jerremy</name>
+      <id>2</id>
+      <studentLevel>Graduate</studentLevel>
+      <evaluations id="26"/>
+      <department reference="1"/>
+      <jobApplications id="27">
+        <application id="28">
+          <emailAddress>j</emailAddress>
+          <pastExperience>j</pastExperience>
+          <preference>1</preference>
+          <jobApplication id="29">
+            <deadline id="30">2017-04-14</deadline>
+            <startDate id="31">2017-04-22</startDate>
+            <endDate id="32">2017-04-29</endDate>
+            <description>some</description>
+            <jobPostingState>Active</jobPostingState>
+            <jobs id="33">
+              <job id="34">
+                <workHours>1</workHours>
+                <hourlyRate>2</hourlyRate>
+                <startDate reference="31"/>
+                <endDate reference="32"/>
+                <jobState>Open</jobState>
+                <jobType>TA</jobType>
+                <jobPosting reference="29"/>
+              </job>
+              <job id="35">
+                <workHours>1</workHours>
+                <hourlyRate>3</hourlyRate>
+                <startDate reference="31"/>
+                <endDate reference="32"/>
+                <jobState>Open</jobState>
+                <jobType>TA</jobType>
+                <jobPosting reference="29"/>
+              </job>
+              <job id="36">
+                <workHours>1</workHours>
+                <hourlyRate>3</hourlyRate>
+                <startDate reference="31"/>
+                <endDate reference="32"/>
+                <jobState>Filled</jobState>
+                <jobType>TA</jobType>
+                <jobPosting reference="29"/>
+                <registration id="37">
+                  <dateRegistered id="38">2017-04-11</dateRegistered>
+                  <student id="39">
+                    <name>jo</name>
+                    <id>3</id>
+                    <studentLevel>Graduate</studentLevel>
+                    <evaluations id="40">
+                      <evaluation id="41">
+                        <text>you succc</text>
+                        <course>ecse333</course>
+                        <instructorName>jdig</instructorName>
+                        <student reference="39"/>
+                      </evaluation>
+                    </evaluations>
+                    <department reference="1"/>
+                    <jobApplications id="42"/>
+                    <registrations id="43">
+                      <registration reference="37"/>
+                    </registrations>
+                  </student>
+                  <job reference="36"/>
+                </registration>
+              </job>
+            </jobs>
+            <instructor id="44">
+              <name>jdig</name>
+              <id>1</id>
+              <jobOfferings id="45">
+                <jobPosting reference="29"/>
+              </jobOfferings>
+              <course id="46">
+                <budgetGiven>20000.0</budgetGiven>
+                <budgetActual>19997.0</budgetActual>
+                <id>ecse333</id>
+                <numLabs>2</numLabs>
+                <numTutorials>2</numTutorials>
+                <instructor reference="44"/>
+                <department reference="1"/>
+              </course>
+              <department reference="1"/>
+            </instructor>
+            <forms id="47">
+              <application reference="28"/>
+            </forms>
+          </jobApplication>
+          <student reference="25"/>
+        </application>
+      </jobApplications>
+      <registrations id="48"/>
+    </student>
+    <student reference="39"/>
+  </students>
+  <courses id="49">
+    <course reference="18"/>
+    <course reference="46"/>
+  </courses>
+  <instructors id="50">
+    <instructor reference="16"/>
+    <instructor reference="44"/>
+  </instructors>
+</department>

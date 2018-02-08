@@ -1,0 +1,80 @@
+namespace ca.mcgill.ecse321.tamas.model;
+
+class JobPosting {
+Date deadline;
+JobPostingState {Active, Deleted}
+Date startDate;
+Date endDate;
+String description;
+1 <@>- * Job jobs;
+
+}
+
+class Job {
+JobState { Open, Offered , Filled, InstructorApproved, DepartmentApproved }
+Integer workHours;
+Integer hourlyRate;
+Date startDate;
+Date endDate;
+JobType { TA , Grader }
+
+
+}
+
+class Student {
+
+String name;
+autounique id;
+StudentLevel { Graduate, Undergraduate }
+1 -- * Evaluation evaluations;
+
+}
+
+
+class Instructor {
+String name;
+autounique id;
+1 -- * JobPosting jobOfferings;
+
+}
+
+class Course {
+Float budgetGiven;
+lazy Float budgetActual; // derive from numTAs, hours, wage, etc
+unique id;
+Integer numLabs;
+Integer numTutorials;
+
+1 -- 0..1 Instructor instructor;
+}
+
+class Department {
+1 -> 0..1 Student currentStudent;
+1 -> 0..1 Instructor currentInstructor;
+1 <@>- * Student students;
+1 <@>- * Course courses;
+1 <@>- * Instructor instructors;
+}
+
+class Application {
+String emailAddress;
+String pastExperience;
+Integer preference;
+
+* forms -- 1 JobPosting jobApplication;
+0..3 jobApplications -- 1 Student student;
+}
+
+class Evaluation {
+String text;
+String course;
+String instructorName;
+
+}
+
+class Registration {
+Date dateRegistered;
+0..3 -- 1  Student;
+0..1 -- 1 Job;
+}
+

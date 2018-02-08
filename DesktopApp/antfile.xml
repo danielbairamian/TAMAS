@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- All targets manually created in this file--> 
+<project name="TamasApplication" basedir="." default="main">
+	<import file="build.xml" as="auto"/>
+	<property name="builddir" value="bin"/>
+		<property name="testDirectory" value="test"/>
+		<property name="reportdirectorytest" value="test/reports"/>
+		<property name="jar.dir" value="${builddir}/jar"/>
+		<property name="reportdirectorytest" value="test/reports"/>
+		<property name="mainApplication" value="ca.mcgill.ecse321.tamas.application.DesktopApplication"/>
+	
+	
+	
+			<target name="clean">
+				<delete dir="${reportdirectorytest}"/>
+				<delete dir="${builddir}"/>
+			</target>
+	
+	
+	<target name="cleanBuild">
+					<delete dir="${reportdirectorytest}"/>
+					<delete dir="${builddir}"/>
+			</target>
+		
+			<target name="run" depends="exportjar">
+				<java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
+			</target>
+			
+			<target depends="auto.build, init" name="test">
+				<junit printsummary="on" haltonfailure="yes" fork="yes">
+				<classpath refid="TamasApplication.classpath"/>
+					<formatter type="xml"/>
+					<batchtest todir="${reportdirectorytest}">
+						<fileset dir="${testDirectory}">
+							<include name="**/AllTests.java"/>
+						</fileset>
+					</batchtest>
+				</junit>
+			</target>
+	
+	
+		<target name="init" depends="clean">
+			<mkdir dir="${reportdirectorytest}"/>
+			<mkdir dir="${jar.dir}"/>
+		</target>
+	
+		
+	
+		
+	
+		<target depends="auto.build, init" name="exportjar">
+			<jar destfile="${jar.dir}/${ant.project.name}.jar">
+				<manifest>
+					<attribute name="Main-Class" value="${mainApplication}"/>
+				</manifest>
+				<fileset dir="${builddir}">
+					<include name="**/*.class"/>
+					<exclude name="**/*Test*.class"/>
+	    		</fileset>
+				<fileset dir=".">
+					<include name="**/lib/*.*"/>
+				</fileset>
+			</jar>
+		</target>
+
+		<target name="main" depends="init, test, run"/>
+</project>
+

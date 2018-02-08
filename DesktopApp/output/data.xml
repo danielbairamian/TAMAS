@@ -1,0 +1,73 @@
+<department id="1">
+  <students id="2">
+    <student id="3">
+      <name>zabrey</name>
+      <id>85</id>
+      <studentLevel>Graduate</studentLevel>
+      <evaluations id="4"/>
+      <department reference="1"/>
+      <jobApplications id="5">
+        <application id="6">
+          <emailAddress>someting</emailAddress>
+          <pastExperience>something</pastExperience>
+          <preference>2</preference>
+          <jobApplication id="7">
+            <deadline id="8">2017-05-06</deadline>
+            <startDate id="9">2018-05-06</startDate>
+            <endDate id="10">2019-05-06</endDate>
+            <description>secondPosting</description>
+            <jobPostingState>Active</jobPostingState>
+            <jobs id="11"/>
+            <instructor id="12">
+              <name>zabron</name>
+              <id>94</id>
+              <jobOfferings id="13">
+                <jobPosting id="14">
+                  <deadline reference="8"/>
+                  <startDate reference="9"/>
+                  <endDate reference="10"/>
+                  <description>firstPosting</description>
+                  <jobPostingState>Deleted</jobPostingState>
+                  <jobs id="15"/>
+                  <instructor reference="12"/>
+                  <forms id="16"/>
+                </jobPosting>
+                <jobPosting reference="7"/>
+              </jobOfferings>
+              <course id="17">
+                <budgetGiven>13.0</budgetGiven>
+                <budgetActual>0.0</budgetActual>
+                <id>ecse444</id>
+                <numLabs>5</numLabs>
+                <numTutorials>5</numTutorials>
+                <instructor reference="12"/>
+                <department reference="1"/>
+              </course>
+              <department reference="1"/>
+            </instructor>
+            <forms id="18">
+              <application reference="6"/>
+            </forms>
+          </jobApplication>
+          <student reference="3"/>
+        </application>
+      </jobApplications>
+      <registrations id="19"/>
+    </student>
+    <student id="20">
+      <name>zabreytwo</name>
+      <id>86</id>
+      <studentLevel>Graduate</studentLevel>
+      <evaluations id="21"/>
+      <department reference="1"/>
+      <jobApplications id="22"/>
+      <registrations id="23"/>
+    </student>
+  </students>
+  <courses id="24">
+    <course reference="17"/>
+  </courses>
+  <instructors id="25">
+    <instructor reference="12"/>
+  </instructors>
+</department>
