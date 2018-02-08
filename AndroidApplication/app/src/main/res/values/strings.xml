@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">TAMAS</string>
+    <string name="action_settings">Settings</string>
+    <string name="homepage_label">Home</string>
+    <string name="viewJobPostings">Job Postings</string>
+    <string name="viewApplications">My Applications</string>
+    <string name="viewCurrentJob">My Current Job</string>
+    <string name="viewPersonalEvaluations">My Evaluations</string>
+    <string name="viewJobOffers">Job Offers</string>
+    <string name="currentCourseNumber"></string>
+    <string name="jobDescription"></string>
+    <string name="email_adress">Student Email</string>
+    <string name="past_experince">Past Experience</string>
+    <string name="preference_label">Preferences:</string>
+    <string name="send_application">Apply</string>
+    <string name="load_application">Fill Application</string>
+    <string name="error_send_application" />
+    <string name="error_see_posting" />
+    <string name="application_preference">\"\"</string>
+    <string name="instructor_name_evaluation" />
+    <string name="evaluated_course" />
+    <string name="job_course_name" />
+    <string name="instructor_name_job" />
+    <string name="startdate_job" />
+    <string name="enddate_job" />
+    <string name="hourly_rate_job" />
+    <string name="work_hour_job" />
+    <string name="login_label">Login</string>
+    <string name="login_button">Login</string>
+    <string name="not_a_member">Not a member ?</string>
+    <string name="register_button">Register</string>
+    <string name="register_label">Register</string>
+    <string name="job_offers">Offers</string>
+    <string name="pending_offer_label">Pending offers</string>
+    <string name="error_see_offers" />
+    <string name="instructor_name_offer" />
+    <string name="position_name_offer" />
+    <string name="startdate_offer" />
+    <string name="enddate_offer" />
+    <string name="hourly_rate_offer" />
+    <string name="work_hour_offer" />
+
+    <string-array name="preferences">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="jobnumberspinners">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
